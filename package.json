@@ -1,35 +1,27 @@
 {
-  "name": "aevix-ai-careerlens",
-  "version": "1.0.0",
-  "description": "Aevix AI – Intelligent Resume & Job Compatibility Analyzer",
-  "main": "server/index.js",
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "server": "node server/index.js",
-    "client": "npm --prefix client run dev",
-    "dev": "concurrently --kill-others \"node server/index.js\" \"npm --prefix client run dev\"",
-    "build": "npm --prefix client run build",
-    "test": "node -e \"console.log('Testing server syntax...'); require('./server/index.js'); process.exit(0);\""
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "ai",
-    "nlp",
-    "resume-analyzer",
-    "job-matching",
-    "careerlens",
-    "mock-interview"
-  ],
-  "author": "Aevix AI Team",
-  "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "concurrently": "^9.1.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "groq-sdk": "^1.6.0",
-    "jsonwebtoken": "^9.0.3",
-    "mammoth": "^1.9.0",
-    "multer": "^1.4.5-lts.1",
-    "pdf-parse": "^1.1.1"
+    "@tailwindcss/vite": "^4.3.3",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.47.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
   }
 }
